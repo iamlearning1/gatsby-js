@@ -1,13 +1,32 @@
 import React from "react";
-import Footer from "../components/footer";
-import Header from "../components/header";
+import { graphql, useStaticQuery } from "gatsby";
+import Layout from "../components/layout";
 
-const BlogPage = () => (
-  <div>
-    <Header></Header>
-    <h1>Blog page</h1>
-    <Footer></Footer>
-  </div>
-);
+const BlogPage = () => {
+  const {
+    allMarkdownRemark: { nodes },
+  } = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark {
+        nodes {
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
+  `);
 
+  console.log(nodes);
+  return (
+    <Layout>
+      <p>Blogs</p>
+      <ol>
+        {nodes.map((node, index) => (
+          <li key={index}>{node.frontmatter.title}</li>
+        ))}
+      </ol>
+    </Layout>
+  );
+};
 export default BlogPage;
