@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Life Musings`,
-    author: `Deepak Kumar`,
+    author: `Kriti Gupta`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

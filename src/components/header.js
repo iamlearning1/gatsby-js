@@ -13,7 +13,6 @@ const Header = props => {
       }
     }
   `);
-  console.log(data);
 
   return (
     <header className={styles.header}>
