@@ -2,10 +2,11 @@ import React from "react";
 import { Link } from "gatsby";
 
 import Layout from "../components/layout";
+import Head from "../components/head";
 
 const IndexPage = () => (
   <Layout>
-    <h1>Index page</h1>
+    <Head></Head>
     <p>
       <Link to="/contact">Contact me</Link>
     </p>
