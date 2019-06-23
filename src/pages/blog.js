@@ -20,8 +20,6 @@ const BlogPage = () => {
     }
   `);
 
-  console.log(edges);
-
   return (
     <Layout>
       <p>Blogs</p>
